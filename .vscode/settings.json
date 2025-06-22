@@ -1,3 +1,5 @@
 {
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.codeLens.enableReferencesCodeLens": true,
+    "dotnet.defaultSolution": "renode/Renode.sln"
 }
