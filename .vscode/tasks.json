@@ -1,0 +1,65 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "[Release][linux-x64] Build Renode",
+            "type": "shell",
+            "linux": {
+                "command": "bash",
+                "args": [
+                    "build.sh"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}/renode"
+                }
+            },
+            "group": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Builds the Renode project in release mode for linux-x64."
+        },
+        {
+            "label": "[Release][linux-x64] Clean Renode",
+            "type": "shell",
+            "linux": {
+                "command": "bash",
+                "args": [
+                    "build.sh",
+                    "-c"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}/renode"
+                }
+            },
+            "group": "build",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Builds the Renode project in release mode for linux-x64."
+        },
+        {
+            "label": "[Release][linux-x64] Clean & Build Renode",
+            "type": "shell",
+            "linux": {
+                "command": "bash",
+                "args": [
+                    "build.sh"
+                ],
+                "options": {
+                    "cwd": "${workspaceFolder}/renode"
+                }
+            },
+            "group": "build",
+            "dependsOn": [
+                "[Release][linux-x64] Clean Renode"
+            ],
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "detail": "Builds the Renode project in release mode for linux-x64."
+        }
+    ]
+}
