@@ -1,3 +1,3 @@
 [submodule "renode"]
 	path = renode
-	url = https://github.com/renode/renode.git
+	url = https://github.com/SoleroTechnologies/renode.git
